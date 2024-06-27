@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    background-image: url("../img/background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: orange;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+    background-color: #57569777;
+    margin: 1.2rem;
+    border-radius: 25px;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar .logo, a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #fff;
+    font-style: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/* dropdown menu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu li {
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.dropdown_menu.open {
+    height: 240px;
+}
+
+/* hero */
+
+.hero {
+    color: #fff;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    word-spacing: 4px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    text-shadow: 5px 5px #4a488d56;
+}
+
+.hero_text {
+    display: flex;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+    text-shadow: 5px 5px #4a488d56;
+}
+.photo-wrapper {
+    background-color: #4a488d49;
+    width: 400px;
+    height: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.photo-wrapper:hover {
+    border: 1px solid #ff8c00
+}
+
+/* about */
+
+.about_container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(74, 72, 141, 0.47);
+}
+
+.about {
+    color: #fff;
+}
+
+.about h2 {
+    letter-spacing: 0.75rem;
+    font-size: 3rem;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    width: 50%;
+    margin-top: 6rem;
+}
+
+.about p {
+    font-size: 1.5rem;
+    padding: 1.2rem;
+    width: 50%;
+    line-height: 1.4;
+}
+
+.portfolio {
+    display: flex;
+    gap: 1.3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #fff;
+}
+
+/* footer */
+.footer {
+    background-color: #4a488d56;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #4a488d56;
+    color: #fff;
+}
+
+.card:hover {
+    background-color: #ffffff7c;
+}
+
+.contact {
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.github {
+    margin-right: 1.5rem;
+}
+
+#contact_text {
+    height: 20rem;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #4a488d56;
+}
+
+/* Portfolio-Karten */
+
+.card {
+    width: 18rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #4a488d56;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border: 1px solid orange;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #555;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background-color: orange;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.btn-primary:hover {
+    background-color: #ff8c00;
+}
+
+
+/* responsive design */
+@media(max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+        z-index: 1000;
+        line-height: 1.4rem;
+    }
+    .about p {
+        width: 100%;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .about h2 {
+        width: 100%;
+        margin-top: 2rem;
+        letter-spacing: normal;
+    }
+    .hero_text {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact {
+        display: flex;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .github {
+        margin-left: 1.5rem;
+    }
+}
+
+
+@media(max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+        z-index: 1000;
+    }
+
+    .hero_text {
+        display: flex;
+        flex-direction: column;
+    }
+}
